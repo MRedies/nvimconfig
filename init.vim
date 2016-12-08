@@ -1,5 +1,3 @@
-
-
 "allow for project specific vimrc's
 set exrc
 set secure
@@ -83,6 +81,9 @@ Plug 'scrooloose/nerdcommenter'
 
 "Command line
 Plug 'lrvick/Conque-Shell'
+
+"Nerdtree
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 
@@ -99,3 +100,5 @@ filetype plugin on
 
 "set leader key
 let mapleader=","
+
+map <C-n> :NERDTreeToggle<CR>
