@@ -102,6 +102,7 @@ filetype plugin on
 "set leader key
 let mapleader=","
 
+"NERDTree appears on Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
 
 "JSON auto formating
