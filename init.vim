@@ -84,6 +84,7 @@ Plug 'lrvick/Conque-Shell'
 
 "Nerdtree
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 
@@ -102,3 +103,6 @@ filetype plugin on
 let mapleader=","
 
 map <C-n> :NERDTreeToggle<CR>
+
+"JSON auto formating
+command J :%!python -m json.tool
