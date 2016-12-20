@@ -85,6 +85,10 @@ Plug 'lrvick/Conque-Shell'
 "Nerdtree
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -107,3 +111,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 "JSON auto formating
 command J :%!python -m json.tool
+
+"Airline 
+set laststatus=2
