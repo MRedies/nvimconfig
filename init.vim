@@ -87,11 +87,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'airblade/vim-gitgutter'
-"Plug 'powerline/fonts'
-"Plug 'powerline/powerline'
-"Plug 'vim-airline/vim-airline'
 
-
+" Clojure
+Plug 'guns/vim-clojure-static'
 Plug 'luochen1990/rainbow'
 call plug#end()
 
