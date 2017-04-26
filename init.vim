@@ -89,8 +89,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 
 " Clojure
-Plug 'guns/vim-clojure-static'
-Plug 'luochen1990/rainbow'
+" Plug 'guns/vim-clojure-static'
+" Plug 'luochen1990/rainbow'
 call plug#end()
 
 
@@ -116,5 +116,5 @@ command J :%!python -m json.tool
 
 
 "Rainbrow parentheses
-let g:rainbow_active = 1 
+"let g:rainbow_active = 1 
 
