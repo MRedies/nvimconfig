@@ -6,7 +6,7 @@ set secure
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 "line numbers on the right
 set number
@@ -57,6 +57,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "vim-plug
 call plug#begin('~/.config/nvim/plugged')
+"Fortran support
+Plug 'rudrab/vimf90'
 "julia
 Plug 'JuliaLang/julia-vim'
 
