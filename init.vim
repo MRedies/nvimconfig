@@ -1,6 +1,7 @@
 "allow for project specific vimrc's
 set exrc
 set secure
+set mouse=a
 
 "tab settings
 set tabstop=4
