@@ -94,6 +94,13 @@ Plug 'airblade/vim-gitgutter'
 " Clojure
 " Plug 'guns/vim-clojure-static'
 " Plug 'luochen1990/rainbow'
+
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -121,3 +128,6 @@ command J :%!python -m json.tool
 "Rainbrow parentheses
 "let g:rainbow_active = 1 
 
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
