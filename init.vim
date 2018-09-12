@@ -4,9 +4,9 @@ set secure
 set mouse=a
 
 "tab settings
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=3
+set softtabstop=3
+set shiftwidth=3
 set expandtab
 
 "line numbers on the right
