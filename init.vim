@@ -15,6 +15,8 @@ set number
 "match brackets
 set showmatch
 
+"split to the right
+set splitright
 
 "improved searching
 set incsearch
@@ -59,7 +61,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "vim-plug
 call plug#begin('~/.config/nvim/plugged')
 "Fortran support
-Plug 'rudrab/vimf90'
+"Plug 'rudrab/vimf90'
 "julia
 Plug 'JuliaLang/julia-vim'
 
@@ -101,6 +103,8 @@ Plug 'cespare/vim-toml'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'chrisbra/vim-diff-enhanced'
 call plug#end()
 
 
