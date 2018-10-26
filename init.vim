@@ -54,9 +54,9 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "vim-plug
 call plug#begin('~/.config/nvim/plugged')
@@ -73,7 +73,7 @@ Plug 'kamwitsta/nordisk'
 Plug 'KeitaNakamura/neodark.vim'
 
 " Track the engine.
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
@@ -105,6 +105,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'chrisbra/vim-diff-enhanced'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+Plug 'junegunn/fzf'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 
@@ -125,13 +135,17 @@ let mapleader=","
 "NERDTree appears on Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
 
-"JSON auto formating
-command J :%!python -m json.tool
 
+set hidden
+let g:LanguageClient_serverCommands = {
+    \   'fortran': ['fortls', '--symbol_skip_mem', '--incrmental_sync', '--autocomplete_no_prefix']
+    \ }
 
-"Rainbrow parentheses
-"let g:rainbow_active = 1 
-
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
