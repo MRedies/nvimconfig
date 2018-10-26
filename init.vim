@@ -47,55 +47,20 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 
-"UltiSnips & youcompleteme
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-"let g:UltiSnipsExpandTrigger = "<tab>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "vim-plug
 call plug#begin('~/.config/nvim/plugged')
-"Fortran support
-"Plug 'rudrab/vimf90'
-"julia
-Plug 'JuliaLang/julia-vim'
 
 Plug 'junegunn/vim-easy-align'
 
 "Themes
-Plug 'vim-scripts/Solarized'
-Plug 'kamwitsta/nordisk'
 Plug 'KeitaNakamura/neodark.vim'
 
-" Track the engine.
-"Plug 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
-Plug 'kiith-sa/DSnips'
-Plug 'Valloric/YouCompleteMe'
-Plug 'ervandew/supertab'
 
 "Nerd commentor
 Plug 'scrooloose/nerdcommenter'
 
-"Command line
-Plug 'lrvick/Conque-Shell'
-
-"Nerdtree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
 Plug 'airblade/vim-gitgutter'
-
-" Clojure
-" Plug 'guns/vim-clojure-static'
-" Plug 'luochen1990/rainbow'
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -111,7 +76,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-Plug 'junegunn/fzf'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'Yggdroot/indentLine'
