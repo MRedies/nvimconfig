@@ -9,8 +9,18 @@ Plug 'https://github.com/tpope/vim-fugitive'
 
 Plug 'KeitaNakamura/neodark.vim'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 
 set termguicolors                " recommended
 colorscheme neodark
+
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+let g:fzf_action = { 'enter': 'tab split' }
