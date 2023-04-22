@@ -20,7 +20,6 @@ colorscheme neodark
 
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-Left> :bp<CR>
+nnoremap <C-Right> :bn<CR>
 
-let g:fzf_action = { 'enter': 'tab split' }
