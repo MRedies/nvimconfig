@@ -12,10 +12,10 @@ Plug 'KeitaNakamura/neodark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-
 Plug 'preservim/nerdcommenter'
 
+" Use release branch (recommended)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let mapleader=","
@@ -24,6 +24,13 @@ let mapleader=","
 let g:NERDCreateDefaultMappings = 0
 nmap <C-j>   <Plug>NERDCommenterToggle
 vmap <C-j>   <Plug>NERDCommenterToggle<CR>gv
+
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 set termguicolors                " recommended
 colorscheme neodark
