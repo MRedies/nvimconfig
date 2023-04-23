@@ -32,4 +32,5 @@ let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 
 nnoremap <C-Left> :bp<CR>
 nnoremap <C-Right> :bn<CR>
+tnoremap <Esc> <C-\><C-n>
 
