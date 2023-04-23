@@ -12,7 +12,7 @@ Plug 'KeitaNakamura/neodark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 
 Plug 'preservim/nerdcommenter'
 
