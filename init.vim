@@ -7,7 +7,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/tpope/vim-fugitive'
 
-Plug 'KeitaNakamura/neodark.vim'
+"Plug 'KeitaNakamura/neodark.vim'
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -19,6 +20,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'https://github.com/github/copilot.vim.git'
 call plug#end()
 
 " Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
@@ -51,7 +53,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 set termguicolors                " recommended
-colorscheme neodark
+colorscheme moonfly
 
 au BufWrite *.cpp,*.hpp :Autoformat
 
