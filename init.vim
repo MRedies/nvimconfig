@@ -7,7 +7,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/airblade/vim-gitgutter'
 Plug 'https://github.com/tpope/vim-fugitive'
 
-"Plug 'KeitaNakamura/neodark.vim'
+Plug 'KeitaNakamura/neodark.vim'
 Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 
 Plug 'vim-airline/vim-airline'
@@ -20,6 +20,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'vim-autoformat/vim-autoformat'
+
+" Copilot
 Plug 'https://github.com/github/copilot.vim.git'
 call plug#end()
 
@@ -42,6 +44,7 @@ let mapleader=","
 
 " Turn off default mapping
 let g:NERDCreateDefaultMappings = 0
+let g:NERDTreeWinSize=50
 nmap <C-j>   <Plug>NERDCommenterToggle
 vmap <C-j>   <Plug>NERDCommenterToggle<CR>gv
 
@@ -66,3 +69,6 @@ tnoremap <Esc> <C-\><C-n>
 set number
 set expandtab
 set shiftwidth=4
+
+"let &runtimepath.=', "~/.config/nvim/lua"'
+lua require("autodisablecopilot")
