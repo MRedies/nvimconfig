@@ -70,5 +70,28 @@ set number
 set expandtab
 set shiftwidth=4
 
+function! CleanOldBuffers()
+  let buffer_limit = 5
+  let buffers = filter(range(1, bufnr('$')), 'buflisted(v:val)')
+  if len(buffers) > buffer_limit
+    let oldest_buffer = -1
+    let oldest_time = localtime()
+    for buf_id in buffers
+      if getbufvar(buf_id, '&mod') == 0
+        let buffer_time = getbufvar(buf_id, 'changedtick')
+        if buffer_time < oldest_time
+          let oldest_time = buffer_time
+          let oldest_buffer = buf_id
+        endif
+      endif
+    endfor
+    if oldest_buffer != -1
+      execute 'bdelete' oldest_buffer
+    endif
+  endif
+endfunction
+
+autocmd BufAdd * call CleanOldBuffers()
+
 "let &runtimepath.=', "~/.config/nvim/lua"'
 lua require("autodisablecopilot")
